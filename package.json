@@ -1,0 +1,26 @@
+{
+  "name": "ContextBridge_Sample",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {},
+  "devDependencies": {
+    "@oracle/oraclejet": "~10.1.0",
+    "@oracle/oraclejet-tooling": "~10.1.0",
+    "electron": "^13.1.0",
+    "electron-builder": "^22.10.5"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "ojet clean web && ojet build && electron .",
+    "dist": "electron-builder build"
+  },
+  "build": {
+    "win": {
+      "target":"nsis"
+    }
+  },
+  "private": true
+}
